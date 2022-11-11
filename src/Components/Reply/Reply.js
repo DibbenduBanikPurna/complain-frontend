@@ -12,6 +12,7 @@ const Reply = () => {
         .then(res=>res.json())
         .then(data=>{
             setCom(data)
+            console.log(data)
         })
     },[id])
 
@@ -25,7 +26,7 @@ const Reply = () => {
         fetch('http://localhost:5000/reply',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({reply, email:com.email })
+            body: JSON.stringify({reply, email:com.email,complain:com.complain })
 
         })
         .then(res=>res.json())
