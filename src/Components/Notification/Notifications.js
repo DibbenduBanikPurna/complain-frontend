@@ -7,9 +7,9 @@ const Notifications = ({data}) => {
         <div className='col-md-3'>
             <div className='card'>
                 <div className='card-body'>
-                    <p>Email:{data.email}</p>
-                    <p>Complain:{data.complain}</p>
-                   <Link to={`/reply/${data._id}`}><button className={data.done? 'btn btn-primary':'btn btn-warning'}>{data.done? "Done" : "reply"}</button></Link> 
+                    <p className=''>Email:{data.email}</p>
+                    <p className=''>Complain:{data.complain}</p>
+                   <Link to={`/reply/${data._id}`}><button className={data.done? 'btn btn-success':'btn btn-warning'}>{data.done? "Done" : "Reply"}</button></Link> 
                 </div>
             </div>
             

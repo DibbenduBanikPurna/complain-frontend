@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 //import useFirebase from '../../Hooks/UseFirebase';
-
+import './Reply.css'
 const Reply = () => {
     const [com,setCom]=useState({})
     //const {users}=useFirebase()
@@ -50,20 +50,20 @@ const Reply = () => {
 
    
     return (
-        <div className='row'>
-            <div className='col-md-4 m-auto'>
+        <div  className='row  bg-secondary vh-100'>
+            <div className='col-md-3 m-auto'>
                 <div className='card'>
                     <div className='card-body'>
-                        <p>{com.complain}</p>
-                        <p>{com.email}</p>
+                        <p>complain:{com.complain}</p>
+                        <p>email:{com.email}</p>
                     </div>
                 </div>
             </div>
-            <div className='col-md-6'>
+            <div className='col-md-6 m-auto'>
                 <form onSubmit={handleSubmit}>
-                <textarea rows="5" name="repli" onChange={handleChange}></textarea>
+                <textarea rows="10" cols="40" name="repli" onChange={handleChange}></textarea>
                 <br/>
-                <button  type='submit' className='btn btn-danger'>Submit</button>
+                <button  type='submit' className='btn btn-primary'>Submit</button>
                 </form>
                 
             </div>

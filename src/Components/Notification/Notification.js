@@ -17,7 +17,7 @@ const Notification = () => {
     return (
         <div className='container'>
             <h2 className='text-center'>All Complains</h2>
-            <div className='row bg-dark vh-100'>
+            <div className='row bg-light vh-100'>
                 {
                     complain.map((data)=>{
                         return <Notifications  key={data._id} data={data}/>

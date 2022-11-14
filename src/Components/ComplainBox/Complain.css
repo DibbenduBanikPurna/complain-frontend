@@ -1,5 +1,8 @@
 .complain
 {
-    background-image: url('http://esrm.mbstu.ac.bd/uploads/slider/39370904945_7c780b3642_k5.jpg');
-    height:100vh
+    background-image: url('https://i.ibb.co/vZRD3Yd/p1.jpg');
+    /* background-image: url('http://esrm.mbstu.ac.bd/uploads/slider/39370904945_7c780b3642_k5.jpg'); */
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

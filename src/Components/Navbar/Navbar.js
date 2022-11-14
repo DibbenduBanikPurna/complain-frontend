@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link className="nav-item nav-link active" to="/">Home </Link>
             <Link className="nav-item nav-link active" to="/notice">Notices </Link>
            {s.email!=users.email && <Link className="nav-item nav-link active" to="/notification">Notification </Link>}
-           {s.email===users.email && <Link className="nav-item nav-link" to="/admin-notification">Admin</Link>}
+           {s.email===users.email && <Link className="nav-item nav-link" to="/admin-notification">Complain</Link>}
            {/* {s.email===users.email && <Link className="nav-item nav-link" to="/makeadmin">Make-Admin</Link>} */}
            {s.email===users.email && <Link className="nav-item nav-link" to="/noticeform">Notice-Form</Link>}
             <Link className="nav-item nav-link" to="/complain">complain-box</Link>

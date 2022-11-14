@@ -11,6 +11,7 @@ const Notices = () => {
         })
     },[])
     return (
+        <div className='bg-light vh-100'>
         <div className='container'>
             <div className='row'>
             {
@@ -20,6 +21,7 @@ const Notices = () => {
             }
             </div>
             
+        </div>
         </div>
     );
 };

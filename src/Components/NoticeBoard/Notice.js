@@ -2,7 +2,7 @@ import React from 'react';
 
 const Notice = ({data}) => {
     return (
-        <div className='col-md-6'>
+        <div className='col-md-4 mt-2'>
             <div className='card'>
                 <div className='card-body'>
                     <p>{data.notice}</p>

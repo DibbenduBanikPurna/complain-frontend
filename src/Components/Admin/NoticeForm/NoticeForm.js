@@ -24,16 +24,21 @@ const NoticeForm = () => {
 
     }
     return (
-        <div className='container'>
+        <div className='bg-light vh-100'>
             <div className='row'>
                 <div className='col-md-4 m-auto mt-5'>
-                <form onSubmit={handleSubmit}>
-            <input onBlur={handleBlur} name="name" type="text" placeholder="Enter Your Name"/>
+                    <div className='card'>
+                        <div className='card-body'>
+                        <form onSubmit={handleSubmit}>
+            <input className='form-control' onBlur={handleBlur} name="name" type="text" placeholder="Enter Your Name"/>
             <br/>
-            <textarea onBlur={handleBlur} name="notice" placeholder="Enter notice"/>
+            <textarea className='form-control' onBlur={handleBlur} name="notice" placeholder="Enter notice"/>
             <br/>
             <input className='btn btn-primary' type="submit" value="submit"/>
             </form>
+                        </div>
+                    </div>
+              
                 </div>
             </div>
            
@@ -43,3 +48,7 @@ const NoticeForm = () => {
 };
 
 export default NoticeForm;
+
+
+
+{/* <a href="https://ibb.co/FgCn5VY"><img src="" alt="p1" border="0"></a> */}

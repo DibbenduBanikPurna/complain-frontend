@@ -24,6 +24,7 @@ const NewMessage = () => {
     },[users.email])
     return (
         <div className='container'>
+        <div className='bg-light'>
             <div className='row'>
                  {
                     newNot.map((data)=>{
@@ -38,7 +39,7 @@ const NewMessage = () => {
                 } 
               
             </div>
-
+            </div>
             
         </div>
     );

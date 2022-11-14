@@ -29,13 +29,13 @@ const ComplainBox = () => {
         <div className='container'>
         <h2 className='bg-light text-center '>WELCOME TO MBSTU</h2>
                 <p></p>
-            <div className='col-md-3 m-auto mt-5'>
+            <div className='col-md-4 m-auto mt-5 '>
                
-            <form onSubmit={handleSubmit}>
+            <form  onSubmit={handleSubmit}>
                 <h4 className='text-light'>Please Put your Complain</h4>
-            <textarea rows="10" cols="50" name='compalins'  onChange={handleChange}></textarea>
+            <textarea rows="12" cols="40" name='compalins'  onChange={handleChange}></textarea>
             <br/>
-                <button className='btn btn-info' type="submit">Submit</button>
+                <button className='btn btn-lg btn-success' style={{marginLeft:'100px'}} type="submit">Submit</button>
             </form>
            
 

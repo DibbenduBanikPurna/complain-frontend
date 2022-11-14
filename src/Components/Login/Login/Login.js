@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import './Login.css'
 import useFirebase from '../../../Hooks/UseFirebase';
-import TextField from '@mui/material/TextField';
+//import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 //import CircularProgress from '@mui/material/CircularProgress';
 //import Alert from '@mui/material/Alert';
@@ -54,20 +54,22 @@ const Login = () => {
     return (
         <div className='login'>
                 
-                <div className='text-center text-info'><h1>Welcome To MBSTU</h1></div>
+                <div className='text-center text-dark'><h4>WELCOME TO COMPLAIN-BOX</h4></div>
             
-            <div className='col-md-3 m-auto border border-primary bg-dark p-5'>
+            <div className='col-md-3 m-auto border border-primary bg-dark text-light p-5'>
                     <p className='text-center mt-5'>Log-in</p>
                     <form onSubmit={handleLogInSubmit}>
-                        <TextField name="email" type="email" onChange={handleChange} sx={{ width: 1, m: 1 }} id="standard-basic" label="Your Email" variant="standard" />
-                        < TextField name="password" onChange={handleChange} sx={{ width: 1, m: 1 }} id="standard-basic" type="password" label="Your Password" variant="standard" />
-
-                        <Button sx={{ width: 1, m: 1 }} type="submit" variant='contained'>LOGIN</Button>
+                        <label>Email</label>
+                        <input  name="email" className='form-control' type="email" onChange={handleChange} sx={{ width: 1, m: 1 }} id="standard-basic" label="Your Email"  />
+                        <label>Password</label>
+                        < input name="password" onChange={handleChange} sx={{ width: 1, m: 1 }} id="standard-basic" type="password" label="Your Password" className='form-control' />
+                    <br/>
+                        <button className='form-control btn btn-success' type="submit" >LOGIN</button>
 
                         <Link to="/register">  <Button color="inherit">NEW USER? Create New Account</Button> </Link>
                       
-                        <p>---------------------</p>
-                        <button className='btn btn-warning' onClick={handleGoggleSignIn}>Login With Google</button>
+                        {/* <p>---------------------</p> */}
+                        <button className='btn btn-warning form-control' onClick={handleGoggleSignIn}>Login With Google</button>
 
                     </form>
 

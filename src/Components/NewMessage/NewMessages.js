@@ -7,9 +7,9 @@ const NewMessages = ({data}) => {
         
         <div className='col-md-3 mt-5'>
             <div className='card'>
-                <div className='card-body bg-dark'>
-                    <h5 className='text-light'>complained:{data?.complain}</h5>
-                    <p className='text-light'>Reply:{data?.reply}</p>
+                <div className='card-body '>
+                    <p className='text-dark'>Complained:{data?.complain}</p>
+                    <p className='text-dark'>Reply:{data?.reply}</p>
                 </div>
             </div>
             
