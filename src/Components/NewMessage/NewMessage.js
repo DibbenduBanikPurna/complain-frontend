@@ -19,7 +19,7 @@ const NewMessage = () => {
         .then(res=>res.json())
         .then(data=>{
             setNew(data);
-            //console.log(data)
+            console.log(data)
         })
     },[users.email])
     return (

@@ -9,8 +9,11 @@ const Notification = () => {
         .then(res=>res.json())
         .then(data=>{
             setComplain(data);
+            console.log(data)
         })
-    })
+    },[])
+
+    
     return (
         <div className='container'>
             <h2 className='text-center'>All Complains</h2>

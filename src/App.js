@@ -53,7 +53,7 @@ function App() {
         {s.email===users.email && <Route path="/admin-notification">  <Notification/> </Route>}
           <Route path="/complain"> <ComplainBox/> </Route>
           <Route path="/reply/:id"> <Reply/> </Route>
-          <Route path="/makeadmin"> <Admin/></Route>
+          {/* <Route path="/makeadmin"> <Admin/></Route> */}
           <Route path="/notification"> <NewMessage/>  </Route>
           <Route path="/notice"> <Notices/> </Route>
           {s.email===users.email &&<Route path="/noticeform"> <NoticeForm/> </Route>}

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import useFirebase from '../../Hooks/UseFirebase';
+//import useFirebase from '../../Hooks/UseFirebase';
 
 const Reply = () => {
     const [com,setCom]=useState({})
-    const {users}=useFirebase()
+    //const {users}=useFirebase()
     const [reply,setReply]=useState('')
     const {id}=useParams()
     useEffect(()=>{
@@ -34,8 +34,21 @@ const Reply = () => {
             console.log(data)
             
         })
+
+       fetch('http://localhost:5000/com',{
+        method:"PUT",
+        headers: {
+            //'authorization': `Bearer ${token}`,
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({email:com.email})
+       })
+      
+
         alert("Complain replied successfully")
     }
+
+   
     return (
         <div className='row'>
             <div className='col-md-4 m-auto'>
@@ -50,7 +63,7 @@ const Reply = () => {
                 <form onSubmit={handleSubmit}>
                 <textarea rows="5" name="repli" onChange={handleChange}></textarea>
                 <br/>
-                <button type='submit' className='btn btn-danger'>Submit</button>
+                <button  type='submit' className='btn btn-danger'>Submit</button>
                 </form>
                 
             </div>

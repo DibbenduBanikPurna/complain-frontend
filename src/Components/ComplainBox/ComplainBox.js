@@ -16,7 +16,7 @@ const ComplainBox = () => {
         fetch('http://localhost:5000/complain',{
             method:"POST",
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({complain, email:users.email} )
+            body: JSON.stringify({complain, email:users.email, done:''} )
         })
         .then(res=>res.json())
         .then(data=>{
