@@ -70,6 +70,7 @@ const useFirebase = () => {
             
             
               setUsers(user)
+              sessionStorage.setItem('email', users.email)
             } else {
               setUsers({})
             }

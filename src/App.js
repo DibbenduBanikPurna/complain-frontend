@@ -51,18 +51,13 @@ function App() {
           <Route exact path="/"> {users.email? <ComplainBox/> :<Login/>}  </Route>
           <Route  path="/register"> <Register/> </Route>
         {s.email===users.email && <Route path="/admin-notification">  <Notification/> </Route>}
-          <Route path="/complain"> <ComplainBox/> </Route>
+          {s.email!=users.email  &&<Route path="/complain"> <ComplainBox/> </Route>}
           <Route path="/reply/:id"> <Reply/> </Route>
           {/* <Route path="/makeadmin"> <Admin/></Route> */}
-          <Route path="/notification"> <NewMessage/>  </Route>
+          {users.email &&<Route path="/notification"> <NewMessage/>  </Route>}
           <Route path="/notice"> <Notices/> </Route>
           {s.email===users.email &&<Route path="/noticeform"> <NoticeForm/> </Route>}
-           {/* <PrivateRoute path="/addbook"><AddBook/>  </PrivateRoute> 
-          <Route exact path="/booklist"><StudentTable/>  </Route>
-          <Route  path="/lists/:id"> <BookIssueForm/> </Route>
-          <Route path="/recivebookissue"> <BookacceptableTable/> </Route>
-          <Route path="/makeadmin"> <MakeAdmin/> </Route>
-          <Route path="/recicve/:id"> <RecieveBookForm/> </Route> */}
+           
                   </Switch>
       </Router> 
       

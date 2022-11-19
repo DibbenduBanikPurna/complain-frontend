@@ -32,7 +32,7 @@ const Navbar = () => {
            {s.email===users.email && <Link className="nav-item nav-link" to="/admin-notification">Complain</Link>}
            {/* {s.email===users.email && <Link className="nav-item nav-link" to="/makeadmin">Make-Admin</Link>} */}
            {s.email===users.email && <Link className="nav-item nav-link" to="/noticeform">Notice-Form</Link>}
-            <Link className="nav-item nav-link" to="/complain">complain-box</Link>
+           {s.email!=users.email && <Link className="nav-item nav-link" to="/complain">complain-box</Link>}
               {users.email ? <Link className="nav-item nav-link" to="/"> <span onClick={logOut}>Logout</span>  </Link>:''}
               {users.email ? <span className="nav-item nav-link" >  {users.displayName}  </span>:''}
           </div>
