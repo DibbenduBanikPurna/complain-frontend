@@ -51,11 +51,11 @@ function App() {
           <Route exact path="/"> {users.email? <ComplainBox/> :<Login/>}  </Route>
           <Route  path="/register"> <Register/> </Route>
         {s.email===users.email && <Route path="/admin-notification">  <Notification/> </Route>}
-          {s.email!=users.email  &&<Route path="/complain"> <ComplainBox/> </Route>}
+          {users.email  &&<Route path="/complain"> <ComplainBox/> </Route>}
           <Route path="/reply/:id"> <Reply/> </Route>
           {/* <Route path="/makeadmin"> <Admin/></Route> */}
           {users.email &&<Route path="/notification"> <NewMessage/>  </Route>}
-          <Route path="/notice"> <Notices/> </Route>
+          {users.email &&<Route path="/notice"> <Notices/> </Route>}
           {s.email===users.email &&<Route path="/noticeform"> <NoticeForm/> </Route>}
            
                   </Switch>
