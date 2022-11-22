@@ -3,11 +3,20 @@ import './Complain.css'
 import useFirebase from '../../Hooks/UseFirebase';
 
 const ComplainBox = () => {
-    const [complain,setComplain]=useState('')
+    const [complain,setComplain]=useState({})
+    //const [category,setCategory]=useState('')
     const {users}=useFirebase()
 
+    console.log(complain.complain)
     const handleChange=(e)=>{
-        setComplain(e.target.value)
+        //setComplain(e.target.value)
+      //  setCategory(e.target.value)
+        const field = e.target.name;
+        const value = e.target.value
+        const newData = { ...complain };
+       // const {users}=useFirebase()
+        newData[field] = value
+        setComplain(newData)
     }
 
     const handleSubmit=(e)=>{
@@ -16,7 +25,7 @@ const ComplainBox = () => {
         fetch('http://localhost:5000/complain',{
             method:"POST",
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({complain, email:users.email, done:''} )
+            body: JSON.stringify({complain:complain.complain, email:users.email, done:'',category:complain.category} )
         })
         .then(res=>res.json())
         .then(data=>{
@@ -33,7 +42,8 @@ const ComplainBox = () => {
                
             <form  onSubmit={handleSubmit}>
                 <h4 className='text-light'>Please Put your Complain</h4>
-            <textarea rows="12" cols="40" name='compalins'  onChange={handleChange}></textarea>
+                <input type="text" name="category" onChange={handleChange} placeholder='Enter Category'/>
+            <textarea rows="12"  cols="40" name='complain'  onChange={handleChange}></textarea>
             <br/>
                 <button className='btn btn-lg btn-success' style={{marginLeft:'100px'}} type="submit">Submit</button>
             </form>

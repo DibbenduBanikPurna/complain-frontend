@@ -8,6 +8,7 @@ const Notifications = ({data}) => {
             <div className='card'>
                 <div className='card-body'>
                     <p className=''>Email:{data.email}</p>
+                    <p>Category:{data.category}</p>
                     <p className=''>Complain:{data.complain}</p>
                    <Link to={`/reply/${data._id}`}><button className={data.done? 'btn btn-success':'btn btn-warning'}>{data.done? "Done" : "Reply"}</button></Link> 
                 </div>

@@ -27,7 +27,7 @@ const Notification = () => {
                         {
                             return val
                         }
-                        else if(val?.complain.toLowerCase().includes(search.toLowerCase()))
+                        else if(val?.category?.toLowerCase().includes(search.toLowerCase()))
                         {
                             return val
                         }
